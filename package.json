@@ -1,0 +1,25 @@
+{
+  "name": "level-logger",
+  "version": "1.0.0",
+  "description": "Enabling console output by levels (log, warn, error, all)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "log",
+    "logger",
+    "console",
+    "console.log"
+  ],
+  "author": "fasoeu@gmail.com",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fasoeu/level-logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fasoeu/level-logger/issues"
+  },
+  "homepage": "https://github.com/fasoeu/level-logger#readme"
+}
