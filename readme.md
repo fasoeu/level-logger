@@ -1,15 +1,15 @@
-# Level Logger
+# Only What Matters - Simple Level Logger
 
 This module/script enables the user to set his own output level for the console.
 It works for node and for browsers (>IE11) and it manages console.(debug|error|info|log|trace|warn) methods only.
 
 ## How to use
-`npm install -save level-logger`
+`npm install -save owm`
 Or in browser
 ```html
-<script src="path/of/file/index.js"></script>
+<script src="path/of/owm/index.js"></script>
 <script>
-var logger = new LevelLogger('l');
+var logger = new OWM('l');
 logger.log('It works!');
 logger.info('This is hidden');
 </script>
@@ -48,12 +48,12 @@ They all will be converted in (-)(a|l|e|w).
 
 #### Special methods: `options`, `reset`, `__noSuchMethod__`
 ```js
-var logger = new LevelLogger(); // enables all ('a' is the default value)
+var logger = new OWM(); // enables all ('a' is the default value)
 logger.options('l'); // enable log method only
 logger.reset(); // shortcut for logger.options() with no parameters: re-enable all primitive methods
 /* Customizable behavior for unexistent methods (as prototype or not) */
 logger.options('le'); // enables log and error methods only;
-LevelLogger.prototype.__noSuchMethod__ = function(name, args){
+OWM.prototype.__noSuchMethod__ = function(name, args){
     this.error(`This method doesn't exists: ${name}.`); 
 };
 logger.newMethod('Test me'); // output: "This method doesn't exists: newMethod."
@@ -66,7 +66,7 @@ logger.newMethod('Test me again'); // output: "Try another method, please."
 #### Special property: `once`
 If needed, primitive console methods could be called using logger.once object. See below for the example:
 ```js
-var logger = new LevelLogger('l'); // Enabled log method only
+var logger = new OWM('l'); // Enabled log method only
 logger.log(1); // output: 1
 logger.warn(2); // no output
 logger.once.warn(3); // output: 3
@@ -76,7 +76,7 @@ logger.warn(4); // no output
 ## Examples
 ```js
 var levels = [ 'l', 'w', 'e', '-w', '-i-d-t' ];
-var logger = new LevelLogger(levels);
+var logger = new OWM(levels);
 logger.log(1); // output: 1
 logger.warn(2); // no output
 logger.error(3); // output: 3
@@ -100,7 +100,7 @@ logger.log(10); // output: 10
 logger.warn(11); // output: 11
 logger.error(12); // output: 12
 
-var logger = new LevelLogger('w,e'); // warn and error outputs only are enabled
+var logger = new OWM('w,e'); // warn and error outputs only are enabled
 logger.warn('This is a warning!');
 logger.log('This log is ignored!'); // this outputs nothing
 logger.error('This is an error!');

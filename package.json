@@ -1,7 +1,7 @@
 {
-  "name": "level-logger",
+  "name": "owm",
   "version": "1.0.0",
-  "description": "Enabling console output by levels (log, warn, error, all)",
+  "description": "OnlyWhatMatters - Enabling console output by levels (log, warn, error, all)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,16 +11,19 @@
     "logger",
     "console",
     "console.log",
-    "levels"
+    "levels",
+    "only",
+    "what",
+    "matters"
   ],
   "author": "fasoeu@gmail.com",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fasoeu/level-logger.git"
+    "url": "git+https://github.com/fasoeu/only-what-matters.git"
   },
   "bugs": {
-    "url": "https://github.com/fasoeu/level-logger/issues"
+    "url": "https://github.com/fasoeu/only-what-matters/issues"
   },
-  "homepage": "https://github.com/fasoeu/level-logger#readme"
+  "homepage": "https://github.com/fasoeu/only-what-matters#readme"
 }

@@ -39,7 +39,7 @@
 		't': 'trace',
 		'w': 'warn',
 	}
-	class LevelLogger {
+	class OWM {
 		/**
 		 * 
 		 * @param {string} levels (accepted case-insensitive (comma|space|tab|pipe|...) separated values: a(ll), e(rror(s)), l(og(s)), w(arn(ing(s))) )
@@ -97,15 +97,15 @@
 	};
 
 	if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-		module.exports = LevelLogger;
+		module.exports = OWM;
 		if (require && require.main===module && root) {
-			root.LevelLogger = LevelLogger;
+			root.OWM = OWM;
 		} 
 	} else if (typeof define === 'function' && define.amd) {
 		define([], function() {
-			return LevelLogger;
+			return OWM;
 		});
 	} else if (root || window) {
-		(root || window).LevelLogger = LevelLogger;
+		(root || window).OWM = OWM;
 	}
 })();
