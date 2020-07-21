@@ -72,7 +72,8 @@
 				.filter(level=>{
 					return methodList.indexOf(level)>-1;
 				});
-			allowed = Array.from(new Set(allowed));
+			/* Apply reversion twice in order to keep the "last occurrence wins" paragadigm */
+			allowed = Array.from(new Set(allowed.reverse())).reverse();
 
 			if (allowed.indexOf('a')<allowed.indexOf('-a')){
 				return this.reset();
