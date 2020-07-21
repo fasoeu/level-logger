@@ -5,7 +5,9 @@ It works for node and for browsers (>IE11) and it manages console.(debug|error|i
 
 ## How to use
 `npm install -save owm`
+
 Or in browser
+
 ```html
 <script src="path/of/owm/index.js"></script>
 <script>
@@ -44,15 +46,17 @@ Extended "human readable" values are also accepted:
 * (-)log / (-)logs
 * (-)err / (-)error / (-)errors
 * (-)warn / (-)warning / (-)warnings
+
 They all will be converted in (-)(a|l|e|w).
 
-#### Special methods: `options`, `reset`, `__noSuchMethod__`
+### Special methods: `options`, `reset`, `__noSuchMethod__`
 ```js
 var logger = new OWM(); // enables all ('a' is the default value)
-logger.options('l'); // enable log method only
+logger.options('l'); // enables log method only
 logger.reset(); // shortcut for logger.options() with no parameters: re-enable all primitive methods
-/* Customizable behavior for unexistent methods (as prototype or not) */
 logger.options('le'); // enables log and error methods only;
+
+/* Customizable behavior for unexistent methods (as prototype or not) */
 OWM.prototype.__noSuchMethod__ = function(name, args){
     this.error(`This method doesn't exists: ${name}.`); 
 };
@@ -63,8 +67,8 @@ logger.__noSuchMethod__ = function(name, args){
 logger.newMethod('Test me again'); // output: "Try another method, please."
 ```
 
-#### Special property: `once`
-If needed, primitive console methods could be called using logger.once object. See below for the example:
+### Special property: `once`
+If needed, all the primitive console methods are accessible through the `once` object:
 ```js
 var logger = new OWM('l'); // Enabled log method only
 logger.log(1); // output: 1
@@ -94,6 +98,9 @@ logger.options('-a'); // disables all
 logger.log(7); // no output
 logger.warn(8); // no output
 logger.error(9); // no output
+logger.once.log(71); // output: 71
+logger.once.warn(81); // output: 81
+logger.once.error(91); // output: 91
 
 logger.reset(); // alias for logger.option() with no parameter: all primitive console functionalities are recovered
 logger.log(10); // output: 10
