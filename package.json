@@ -1,6 +1,6 @@
 {
   "name": "owm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "OnlyWhatMatters - Enabling console output by levels (log, warn, error, all)",
   "main": "index.js",
   "scripts": {
