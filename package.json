@@ -10,7 +10,8 @@
     "log",
     "logger",
     "console",
-    "console.log"
+    "console.log",
+    "levels"
   ],
   "author": "fasoeu@gmail.com",
   "license": "ISC",

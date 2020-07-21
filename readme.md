@@ -7,7 +7,7 @@ It works for node and for browsers (>IE11) and it manages console.(debug|error|i
 `npm install -save level-logger`
 Or in browser
 ```html
-<script src="https://github.com/fasoeu/level-logger"></script>
+<script src="path/of/file/index.js"></script>
 <script>
 var logger = new LevelLogger('l');
 logger.log('It works!');
