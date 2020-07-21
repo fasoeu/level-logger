@@ -15,9 +15,9 @@ logger.info('This is hidden');
 </script>
 ```
 
-### The input parameter
+### The input parameter(s)
 
-Each parameter could be provide in exclusion (or inclusion) mode by prepending (or not) a "-" dash before the letter corresponding the desired level.
+Each parameter could be provided in exclusion (or inclusion) mode by prepending (or not) a "-" dash before the letter corresponding the desired level.
 
 #### Accepted values (as single concatenated string, as multiple strings or as array of strings)
 * "d": enabled `debug` method
